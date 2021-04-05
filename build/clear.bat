@@ -1,0 +1,2 @@
+@echo off
+@for %%i in (*.*) do if not "%%i"=="SDL2.dll" if not "%%i"=="clear.bat"  if not "%%i"=="baran_logo.bmp"  if not "%%i"=="libfreetype-6.dll"  if not "%%i"=="SDL2_ttf.dll" if not "%%i"=="zlib1.dll" del /q "%%i"
