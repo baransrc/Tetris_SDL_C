@@ -837,6 +837,9 @@ inline bool will_fall_this_turn(Game_State* game_state)
 
 bool tetromino_fall(Game_State* game_state)
 {
+	// Clamp movement to avoid overflows or collisions:
+	clamp_movement(game_state);
+		
 	game_state->fall_clock = 0.0f;
 	game_state->current_tetromino.pivot_position.y--;
 
